@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>raji portfplio</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="css/tooplate-style.css">
+
+<style>
+/* Compact Header with Better Logo & Alignment */
+.custom-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+ /* reduced height */
+}
+
+
+
+
+/* Ensure header layout stays horizontal on desktop and aligns hamburger right */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* aligns items to top */
+  padding: 15px 30px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1; /* removes extra spacing */
+  margin-top: 2px; /* optional tweak */
+}
+
+.brand {
+  margin-top: -4px;
+}
+
+.brand a {
+  font-size: 28px; /* slightly larger than before */
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li a {
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+  position: relative;
+
+}
+
+.navbar .nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #f9c92b;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+  color: #f9c92b;
+}
+
+.navbar .nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Ensure spacing below header is not covered by fixed header */
+body {
+  scroll-padding-top: 70px;
+}
+
+
+
+/* Ensure header layout stays horizontal on desktop and aligns hamburger right */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Place hamburger on right by default, hide on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+/* Ensure header layout stays horizontal on desktop and aligns hamburger right */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Place hamburger on right by default, hide on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- PRE LOADER -->
+<div class="preloader">
+     <div class="spinner">
+          <span class="spinner-rotate"></span>
+     </div>
+</div>
+
+<!-- MODERN HEADER -->
+<header class="custom-header">
+  <div class="header-container">
+    <!-- Brand Left -->
+    <h1 class="brand"><a href="#home" class="smoothScroll">Raji</a></h1>
+
+    <!-- Hamburger Right (Mobile Only) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <!-- Nav Menu -->
+    <nav class="navbar" id="navbar">
+      <ul class="nav-links">
+        <li><a href="#home" class="smoothScroll">Home</a></li>
+        <li><a href="#about" class="smoothScroll">About</a></li>
+        <li><a href="#service" class="smoothScroll">Services</a></li>
+        <li><a href="#work" class="smoothScroll">Work</a></li>
+        <li><a href="#contact" class="smoothScroll">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+
+<script>
+  document.querySelectorAll('.smoothScroll').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+
+  hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+  });
+</script>
+
+
+<!-- HOME SECTION -->
+<section id="home" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-5 col-md-7 col-sm-12">
+                    <div class="home-thumb">
+                         <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hey, I'm Raji.</h1>
+                         <p class="wow fadeInUp white-color" data-wow-delay="0.6s">
+                              From logos to Instagram creatives, I design content that builds brand trust, engagement, and style. Let’s turn your vision into scroll-stopping visuals.
+                         </p>
+                         <a href="#service" class="wow fadeInUp smoothScroll btn btn-default section-btn" data-wow-delay="1s">Explore My Work</a>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+
+
+
+<div class="container">
+
+  <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+     <div class="text-center">
+      <h2>What I Do</h2>
+      <p>Delivering high-quality graphic design and video content tailored to your brand and occasion.</p>
+  </div>
+  </div>
+
+  <!-- ROW 1 -->
+  <div class="row">
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="service-thumb">
+              <i class="fa fa-share-alt"></i>
+              <h4>Social Media Designs</h4>
+              <p>Creative and engaging post designs for Instagram, Facebook, and more.</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="service-thumb">
+              <i class="fa fa-id-card-o"></i>
+              <h4>Business Card Design</h4>
+              <p>Professional and clean business card layouts to represent your brand identity.</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="service-thumb">
+              <i class="fa fa-heart-o"></i>
+              <h4>Wedding & Special Posters</h4>
+              <p>Designs for weddings, birthdays, and events that capture beautiful moments.</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="row">
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="service-thumb">
+              <i class="fa fa-certificate"></i>
+              <h4>Certificate Design</h4>
+              <p>Elegant certificate templates for schools, events, and corporate needs.</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="service-thumb">
+              <i class="fa fa-picture-o"></i>
+              <h4>Banner Designs</h4>
+              <p>Attractive banners for shops, promotions, and digital advertising.</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="service-thumb">
+              <i class="fa fa-youtube-play"></i>
+              <h4>YouTube Thumbnails</h4>
+              <p>Catchy thumbnails that increase views and grab attention instantly.</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="row">
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
+          <div class="service-thumb">
+              <i class="fa fa-file-text-o"></i>
+              <h4>Flyer Design</h4>
+              <p>Eye-catching flyers that promote products, events, and offers with impact.</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
+          <div class="service-thumb">
+              <i class="fa fa-diamond"></i>
+              <h4>Logo Design</h4>
+              <p>Memorable logos that reflect your brand’s identity and message.</p>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.8s">
+          <div class="service-thumb">
+              <i class="fa fa-video-camera"></i>
+              <h4>Video Editing</h4>
+              <p>Smooth and creative edits for reels, events, and professional content.</p>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- ABOUT SECTION -->
+<section id="about" class="parallax-section">
+     <div class="container">
+          <div class="row">
+               
+               <div class="col-md-4 col-sm-8">
+                    <div class="about-image-thumb">
+                         <img src="images/profile-image.jpg" class="wow fadeInUp img-responsive" data-wow-delay="0.2s" alt="about image">
+                         <ul class="social-icon">
+                              <li><a href="#" class="fa fa-facebook"></a></li>
+                              <li><a href="https://www.instagram.com/dr.creationss?igsh=YXRhMWMxbjIzazMx" class="fa fa-instagram"></a></li>
+                              <li><a href="#" class="fa fa-behance"></a></li>
+                              <li><a href="#" class="fa fa-whatsapp"></a></li>
+                         </ul>
+                    </div>
+               </div>
+
+               <div class="col-md-8 col-sm-12">
+                    <div class="about-thumb">
+                         <!-- SECTION TITLE -->
+                         <div class="wow fadeInUp section-title" data-wow-delay="0.6s">
+                              <h2>About Me</h2>
+                              <p>Graphic Designer | Content Creator | Visual Storyteller</p>
+                         </div>
+                         <div class="wow fadeInUp" data-wow-delay="0.8s">
+                              <p>Hello! I'm <strong>Dasari Rajeswari</strong>, a passionate graphic designer with a creative edge and an eye for detail. I specialize in crafting eye-catching social media designs, unique logos, business cards, certificates, and marketing materials that make brands stand out.</p>
+                              <p>With hands-on experience in tools like Photoshop and Canva, I turn ideas into visual content that connects with your audience. Whether it's for a wedding, a business, or an event, I bring each design to life with precision and creativity.</p>
+                              <p>Let’s bring your vision into reality — one design at a time!</p>
+                         </div>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+
+
+<!-- WORK SECTION -->
+<section id="work" class="parallax-section">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 col-sm-12">
+        <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+          <h2>Selected Designs</h2>
+          <p>A glimpse of my creative work — from logos to social media posters and special designs.</p>
+        </div>
+      </div>
+
+      <!-- Logo 1 - SVK Trends -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/logo1.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Logo Design</h4>
+              <h2>SVK Trends</h2>
+            </div>
+            <img src="images/social-media-posts/logo1.jpg" class="img-responsive" alt="SVK Logo">
+          </a>
+        </div>
+      </div>
+
+      <!-- Logo 2 - KSR Real Estate -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/logo2.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Logo Design</h4>
+              <h2>KSR Real Estate</h2>
+            </div>
+            <img src="images/social-media-posts/logo2.jpg" class="img-responsive" alt="KSR Logo">
+          </a>
+        </div>
+      </div>
+
+      <!-- Labour Day Post -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post1.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Social Media Post</h4>
+              <h2>Labour Day</h2>
+            </div>
+            <img src="images/social-media-posts/post1.jpg" class="img-responsive" alt="Labour Day">
+          </a>
+        </div>
+      </div>
+
+      <!-- New House Real Estate -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post2.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Real Estate Ad</h4>
+              <h2>New House Search</h2>
+            </div>
+            <img src="images/social-media-posts/post2.jpg" class="img-responsive" alt="Real Estate Post">
+          </a>
+        </div>
+      </div>
+
+      <!-- Stop Wasting Time -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post3.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Real Estate Ad</h4>
+              <h2>Dream Home Campaign</h2>
+            </div>
+            <img src="images/social-media-posts/post3.jpg" class="img-responsive" alt="Post 3">
+          </a>
+        </div>
+      </div>
+
+      <!-- Home Is Where It Begins -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post4.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Promo Post</h4>
+              <h2>Real Estate Campaign</h2>
+            </div>
+            <img src="images/social-media-posts/post4.jpg" class="img-responsive" alt="Post 4">
+          </a>
+        </div>
+      </div>
+
+      <!-- RR Tiffins -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post5.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Food Poster</h4>
+              <h2>RR Tiffins Catering</h2>
+            </div>
+            <img src="images/social-media-posts/post5.jpg" class="img-responsive" alt="Food Poster">
+          </a>
+        </div>
+      </div>
+
+      <!-- Ramzan Wishes -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post6.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Festival Poster</h4>
+              <h2>Ramzan Greetings</h2>
+            </div>
+            <img src="images/social-media-posts/post6.jpg" class="img-responsive" alt="Post 6">
+          </a>
+        </div>
+      </div>
+
+      <!-- Holi Poster -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post7.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Festival Poster</h4>
+              <h2>Happy Holi</h2>
+            </div>
+            <img src="images/social-media-posts/post7.jpg" class="img-responsive" alt="Holi Poster">
+          </a>
+        </div>
+      </div>
+
+      <!-- Birthday Invite -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post8.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Invitation</h4>
+              <h2>Birthday Celebration</h2>
+            </div>
+            <img src="images/social-media-posts/post8.jpg" class="img-responsive" alt="Birthday Invite">
+          </a>
+        </div>
+      </div>
+
+      <!-- Wedding Invitation -->
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="work-thumb">
+          <a href="images/social-media-posts/post9.jpg" class="image-popup">
+            <div class="work-thumb-overlay">
+              <h4 class="white-color">Invitation</h4>
+              <h2>Wedding Poster</h2>
+            </div>
+            <img src="images/social-media-posts/post9.jpg" class="img-responsive" alt="Wedding Invitation">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="parallax-section">
+  <div class="container">
+    <div class="row">
+
+      <!-- Section Title -->
+      <div class="col-md-12 col-sm-12">
+        <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+          <h2>Get in Touch</h2>
+          <p>Have a design in mind or need help with branding? Just drop a message — I’d love to work with you!</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-7 col-sm-12">
+        <div class="wow fadeInUp" data-wow-delay="0.4s">
+          <form id="contact-form" action="#" method="get">
+            <div class="row g-3">
+              <div class="col-md-6 col-sm-6">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <textarea class="form-control" rows="5" name="message" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="col-12 text-end mt-3">
+                <button id="submit" type="submit" class="btn btn-dark px-4 py-2">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-5 col-sm-12">
+        <div class="wow fadeInUp contact-info" data-wow-delay="0.4s">
+          <div class="section-title">
+            <h2>Contact Info</h2>
+            <p>Let’s connect for your next design project — whether it’s logos, flyers, or special event posters.</p>
+          </div>
+          <p><i class="fa fa-map-marker"></i> Sheela Nagar, Visakhapatnam</p>
+          <p><i class="fa fa-comment"></i> <a href="mailto:rajeswaridasari06@gmail.com">rajeswaridasari06@gmail.com</a></p>
+          <p><i class="fa fa-phone"></i> <a href="tel:8977591228">+91 89775 91228</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+     form .form-control {
+  margin-bottom: 15px;
+}
+
+form textarea.form-control {
+  resize: vertical;
+}
+
+</style>
+
+<!-- FOOTER SECTION -->
+<footer>
+  <div class="container">
+    <div class="row">
+
+      <div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.8s">
+        <p class="white-color">
+          © 2025 Dasari Rajeswari. All Rights Reserved. <br>
+          Designed & Developed by <a href="#" target="_blank" style="color: #fdd835;">Naveen Roy</a>
+        </p>
+
+        <div class="wow fadeInUp" data-wow-delay="1s">
+          <ul class="social-icon">
+            <li><a href="https://www.facebook.com/yourprofile" class="fa fa-facebook" target="_blank"></a></li>
+            <li><a href="https://www.instagram.com/dr.creationss?igsh=YXRhMWMxbjIzazMx" class="fa fa-instagram" target="_blank"></a></li>
+            <li><a href="https://github.com/yourprofile" class="fa fa-github" target="_blank"></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
